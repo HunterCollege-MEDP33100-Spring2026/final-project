@@ -21,16 +21,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// base page - nothing else after local host after slash
 app.use('/', indexRouter);
+// browser and api 
 app.use('/entries', entriesRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -42,11 +44,11 @@ app.use(function(err, req, res, next) {
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URL)
-    .then(function() {
-        console.log('Connected to MongoDB!');
-    })
-    .catch(function(error) {
-        console.log('Error connecting to MongoDB.');
-    })
+  .then(function () {
+    console.log('Connected to MongoDB!');
+  })
+  .catch(function (error) {
+    console.log('Error connecting to MongoDB.');
+  })
 
 module.exports = app;
