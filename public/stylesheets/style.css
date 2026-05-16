@@ -1,1 +1,96 @@
-/* Your CSS goes here  */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f1e8;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+.flipbook-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+#flipbook {
+    width: 800px;
+    height: 500px;
+}
+
+.page {
+    background: white;
+}
+.page img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.memory-section {
+    padding: 50px 20px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+textarea {
+    height: 120px;
+    padding: 10px;
+    resize: none;
+}
+
+#notesWall {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.note {
+    width: 200px;
+    min-height: 200px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: rotate(-2deg);
+    cursor: grab;
+    word-wrap: break-word;
+}
+
+@media(max-width: 900px) {
+
+    #flipbook {
+        width: 95%;
+        height: 400px;
+    }
+     .hero h1 {
+        font-size: 2.5rem;
+    }
+
+}
