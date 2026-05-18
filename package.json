@@ -12,7 +12,21 @@
     "express": "~4.16.1",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
-    "mongoose": "^9.6.1",
+    "mongoose": "^9.6.2",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "- Include a link to the live version of the project hosted on Render.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joohongj/final-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/joohongj/final-project/issues"
+  },
+  "homepage": "https://github.com/joohongj/final-project#readme"
 }

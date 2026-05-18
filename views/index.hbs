@@ -1,2 +1,70 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Indie+Flower&family=Love+Ya+Like+A+Sister&family=Nanum+Pen+Script&display=swap"
+  rel="stylesheet">
+<h1>Wallpaper <span>Therapy</span><img src="images/flower.png"></h1>
+
+<section class="create-note">
+
+  <form id="create-form">
+
+    <input type="text" name="title" placeholder="Name your feelings" required>
+
+    <textarea name="content" placeholder="What's on your mind?" required></textarea>
+
+    <button type="submit">
+      Send thoughts
+    </button>
+
+  </form>
+
+</section>
+
+<main class="notes-grid">
+
+  {{#each notes}}
+
+  <div class="note-card" data-id="{{this._id}}">
+
+    <h2 class="note-title">
+      {{this.title}}
+    </h2>
+
+    <p class="note-content">
+      {{this.content}}
+    </p>
+
+    <small>
+      {{this.createdAt}}
+    </small>
+
+    <button class="delete-btn">
+      Delete
+    </button>
+
+    <details>
+
+      <summary>Edit</summary>
+
+      <form class="edit-form">
+
+        <input type="text" name="title" value="{{this.title}}" required>
+
+        <textarea name="content" required>{{this.content}}</textarea>
+
+        <button type="submit">
+          Update
+        </button>
+
+      </form>
+
+    </details>
+
+  </div>
+
+  {{/each}}
+
+</main>
+
+<script src="/javascripts/script.js"></script>

@@ -1,9 +1,18 @@
 var express = require('express');
 var router = express.Router();
+const fs = require('fs');
+const Entry = require('../models/notes');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Public Archive' });
+router.get('/', async function (req, res) {
+  const notes = await Entry.find().sort({
+    createdAt: -1
+  });
+  res.render('index', {
+    title: 'Therapy Wallpaper', notes: notes
+  })
 });
 
 module.exports = router;
+
+
+
