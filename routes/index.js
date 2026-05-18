@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const fs = require('fs');
 const Entry = require('../models/notes');
 
-/* GET home page. */ // actual home page
 router.get('/', async function (req, res) {
   const notes = await Entry.find().sort({
     createdAt: -1

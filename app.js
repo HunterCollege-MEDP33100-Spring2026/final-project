@@ -43,7 +43,9 @@ app.use(function (err, req, res, next) {
 });
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(process.env.MONGODB_URL, {
+  dbName: 'project' // Update this to your name of your database
+})
   .then(function () {
     console.log('Connected to MongoDB!');
   })

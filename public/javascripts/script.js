@@ -104,3 +104,56 @@ document.querySelectorAll('.note-card').forEach(note => {
   const hue = Math.floor(Math.random() * 360);
   note.style.setProperty('--note-color', `hsl(${hue}, 70%, 80%)`);
 });
+
+// const notes = document.querySelectorAll('.note-card');
+
+// for (let i = 0; i < notes.length; i++) {
+
+//   const note = notes[i];
+
+//   note.style.left = `${Math.random() * 800}px`;
+//   note.style.top = `${Math.random() * 500}px`;
+
+//   makeDraggable(note);
+// }
+
+// function makeDraggable(element) {
+
+//   let offsetX = 0;
+//   let offsetY = 0;
+//   let isDragging = false;
+
+//   element.style.position = 'absolute';
+//   element.style.cursor = 'move';
+
+//   element.addEventListener('mousedown', startDragging);
+
+//   function startDragging(event) {
+
+//     isDragging = true;
+
+//     offsetX = event.clientX - element.offsetLeft;
+//     offsetY = event.clientY - element.offsetTop;
+
+//     element.style.zIndex = 1000;
+
+//     document.addEventListener('mousemove', drag);
+//     document.addEventListener('mouseup', stopDragging);
+//   }
+
+//   function drag(event) {
+
+//     if (!isDragging) return;
+
+//     element.style.left = `${event.clientX - offsetX}px`;
+//     element.style.top = `${event.clientY - offsetY}px`;
+//   }
+
+//   function stopDragging() {
+
+//     isDragging = false;
+
+//     document.removeEventListener('mousemove', drag);
+//     document.removeEventListener('mouseup', stopDragging);
+//   }
+// }
