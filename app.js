@@ -40,7 +40,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// Connect to MongoDB
+// connect with mongoDB 
 mongoose.connect(process.env.MONGODB_URL)
     .then(function() {
         console.log('Connected to MongoDB!');
