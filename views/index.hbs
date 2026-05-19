@@ -1,86 +1,70 @@
 <section class="hero">
 
-    <h1>Passed Notes</h1>
+    <h1>The Memory Wall </h1>
 
     <p>
-        A digital archive of school memories.
-        Read through my zine and leave behind your own anonymous memory.
+        Everyone has a school memory worth remembering. Read through my zine, then leave behind an anonymous memory of
+        your own.
     </p>
 
-    <button id="openBtn">Open Archive</button>
+    <a href="/my-zine.pdf" target="_blank">
 
-</section>
+        <button>
+            Read My Zine
+        </button>
 
-<section class="flipbook-section">
-
-    <div id="flipbook">
-         <div class="page">
-            <img src="/images/img01.png">
-        </div>
-
-        <div class="page">
-            <img src="/images/img02.png">
-        </div>
-
-        <div class="page">
-            <img src="/images/img03.png">
-        </div>
-
-        <div class="page">
-            <img src="/images/img04.png">
-        </div>
-
-        <div class="page">
-            <img src="/images/img05.png">
-        </div>
-           <div class="page">
-            <img src="/images/img06.png">
-        </div>
-
-        <div class="page">
-            <img src="/images/img07.png">
-        </div>
-
-        <div class="page">
-            <img src="/images/img08.png">
-        </div>
-
-        <div class="page">
-            <img src="/images/img09.png">
-        </div>
-
-        <div class="page">
-            <img src="/images/img10.png">
-        </div>
-         <div class="page">
-            <img src="/images/img11.png">
-        </div>
-
-        <div class="page">
-            <img src="/images/img12.png">
-        </div>
-
-    </div>
+    </a>
 
 </section>
 
 <section class="memory-section">
 
-    <h2>Leave Your Memory</h2>
+    <h2>Leave a School Memory</h2>
 
-    <div class="controls">
-         <textarea id="memoryInput" placeholder="Write your school memory..."></textarea>
+    <p>
+        Choose any color sticky note and add your story.
+    </p>
+
+
+    <div class="form-box">
 
         <select id="colorInput">
-            <option value="#ffeb3b">Yellow</option>
-            <option value="#ffb6c1">Pink</option>
-            <option value="#90caf9">Blue</option>
-            <option value="#a5d6a7">Green</option>
+
+            <option value="#ffeb3b">
+                Yellow Sticky Note
+            </option>
+
+            <option value="#ffb6c1">
+                Pink Sticky Note
+            </option>
+
+            <option value="#90caf9">
+                Blue Sticky Note
+            </option>
+
+            <option value="#a5d6a7">
+                Green Sticky Note
+            </option>
+
         </select>
 
-        <button id="submitBtn">Post Memory</button>
+
+        <textarea id="memoryInput" placeholder="Write your school memory...">
+        </textarea>
+
+
+        <button id="submitBtn">
+            Add
+        </button>
 
     </div>
+
+</section>
+
+
+<section class="notes-section">
+
+    <h2> Memory Board </h2>
 
     <div id="notesWall"></div>
 

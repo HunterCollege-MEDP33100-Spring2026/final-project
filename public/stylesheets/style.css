@@ -1,96 +1,209 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f1e8;
+    font-family: 'Times New Roman', Times,;
+    background: #f4f1ea;
 }
 
+/* HERO SECTION */
+
 .hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background: #fcfdfd;
+    background-image: url(/images/img10.jpg);
+
     text-align: center;
-    padding: 20px;
+    padding: 20px 10px;
 }
+
+
 .hero h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
+    font-size: 70px;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    max-width: 600px;
-    line-height: 1.6;
+    font-size: 22px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.5;
 }
 
-button {
-    padding: 12px 20px;
+.hero button {
+    margin-top: 30px;
+    padding: 15px 30px;
     border: none;
+    border-radius: 30px;
     cursor: pointer;
-    margin-top: 15px;
-    font-size: 16px;
-}
-.flipbook-section {
-    display: flex;
-    justify-content: center;
-    padding: 50px 0;
+    font-size: 18px;
 }
 
-#flipbook {
-    width: 800px;
-    height: 500px;
-}
-
-.page {
-    background: white;
-}
-.page img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
+/* MEMORY FORM */
 
 .memory-section {
-    padding: 50px 20px;
+    background: #eeeb42d4;
+    padding: 60px 20px;
 }
 
-.controls {
+.memory-section h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.memory-section p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+
+/* FORM BOX */
+
+.form-box {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin-bottom: 40px;
+    gap: 20px;
+
+    /* move to left */
+    width: 500px;
+    margin-left: 0;
 }
+
+
+/* SELECT + TEXTAREA */
+
+select,
 textarea {
-    height: 120px;
-    padding: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid #222;
+    font-size: 22px;
+    font-family: Georgia, serif;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+
+/* DROPDOWN */
+
+select {
+    height: 70px;
+    cursor: pointer;
+}
+
+
+/* NOTEBOOK TEXT AREA */
+
+textarea {
+    height: 250px;
     resize: none;
+
+    background-image: url('/images/notebook-bg.png');
+    background-repeat: repeat;
+    background-size: contain;
+
+    line-height: 32px;
+    color: #222;
+}
+
+
+/* INPUT FOCUS EFFECT */
+
+select:focus,
+textarea:focus {
+    border-color: #b31ee0;
+    box-shadow: 0 0 15px rgba(138, 92, 255, 0.3);
+}
+
+
+/* BUTTON */
+
+#submitBtn {
+    width: 180px;
+    padding: 18px;
+    border: none;
+    border-radius: 40px;
+    background: #f3f3f3;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+#submitBtn:hover {
+    background: #222;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* BUTTON CLICK */
+
+#submitBtn:active {
+    transform: scale(0.96);
+}
+
+/* READ MY ZINE BUTTON */
+
+.hero button {
+    margin-top: 30px;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    background: #f3f3f3;
+
+    transition: all 0.3s ease;
+}
+
+
+/* HOVER EFFECT */
+
+.hero button:hover {
+    background: #222;
+    color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+/* CLICK EFFECT */
+
+.hero button:active {
+    transform: scale(0.96);
+}
+
+/* NOTES WALL */
+
+.notes-section {
+    padding: 60px 20px;
 }
 
 #notesWall {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
 }
+
 .note {
-    width: 200px;
-    min-height: 200px;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    width: 220px;
+    min-height: 220px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    font-size: 18px;
     transform: rotate(-2deg);
-    cursor: grab;
     word-wrap: break-word;
 }
 
+/* MOBILE */
+
 @media(max-width: 900px) {
 
-    #flipbook {
-        width: 95%;
-        height: 400px;
-    }
-     .hero h1 {
-        font-size: 2.5rem;
+    .hero h1 {
+        font-size: 45px;
     }
 
 }
