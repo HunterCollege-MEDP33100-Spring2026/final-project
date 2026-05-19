@@ -46,8 +46,6 @@ async function loadEntries() {
 
 }
 
-
-
 // ADD MEMORY
 
 const submitBtn =

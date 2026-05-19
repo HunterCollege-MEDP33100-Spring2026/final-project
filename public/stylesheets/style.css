@@ -4,7 +4,7 @@ body {
     background: #f4f1ea;
 }
 
-/* HERO SECTION */
+/* hero*/
 
 .hero {
     background: #fcfdfd;
@@ -36,7 +36,7 @@ body {
     font-size: 18px;
 }
 
-/* MEMORY FORM */
+/* memory form  */
 
 .memory-section {
     background: #eeeb42d4;
@@ -54,7 +54,7 @@ body {
 }
 
 
-/* FORM BOX */
+/* form box */
 
 .form-box {
     display: flex;
@@ -66,8 +66,6 @@ body {
     margin-left: 0;
 }
 
-
-/* SELECT + TEXTAREA */
 
 select,
 textarea {
@@ -81,7 +79,7 @@ textarea {
 }
 
 
-/* DROPDOWN */
+/* drop down  */
 
 select {
     height: 70px;
@@ -89,7 +87,7 @@ select {
 }
 
 
-/* NOTEBOOK TEXT AREA */
+/* note book text */
 
 textarea {
     height: 250px;
@@ -104,7 +102,7 @@ textarea {
 }
 
 
-/* INPUT FOCUS EFFECT */
+/* input focus */
 
 select:focus,
 textarea:focus {
@@ -113,7 +111,7 @@ textarea:focus {
 }
 
 
-/* BUTTON */
+/* button */
 
 #submitBtn {
     width: 180px;
@@ -127,7 +125,7 @@ textarea:focus {
 }
 
 
-/* BUTTON HOVER */
+/* button hover*/
 
 #submitBtn:hover {
     background: #222;
@@ -136,13 +134,13 @@ textarea:focus {
 }
 
 
-/* BUTTON CLICK */
+/* button */
 
 #submitBtn:active {
     transform: scale(0.96);
 }
 
-/* READ MY ZINE BUTTON */
+/* read my zine */
 
 .hero button {
     margin-top: 30px;
@@ -157,7 +155,7 @@ textarea:focus {
 }
 
 
-/* HOVER EFFECT */
+/* hover  */
 
 .hero button:hover {
     background: #222;
@@ -169,13 +167,13 @@ textarea:focus {
 }
 
 
-/* CLICK EFFECT */
+/* click */
 
 .hero button:active {
     transform: scale(0.96);
 }
 
-/* NOTES WALL */
+/* wall */
 
 .notes-section {
     padding: 60px 20px;
@@ -198,7 +196,7 @@ textarea:focus {
     word-wrap: break-word;
 }
 
-/* MOBILE */
+/* mobile */
 
 @media(max-width: 900px) {
 
