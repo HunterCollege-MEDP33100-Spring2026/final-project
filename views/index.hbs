@@ -1,2 +1,95 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<section class="hero">
+    <div class="hero-overlay">
+        <p class="eyebrow">PUBLIC ARCHIVE</p>
+        <h1>{{title}}</h1>
+        <p class="subtitle">{{subtitle}}</p>
+        <p class="intro-text">{{introText}}</p>
+
+        <a href="#formSection" class="hero-button">Throw a Bottle</a>
+    </div>
+</section>
+
+<main class="main-content">
+    <section id="formSection" class="form-section">
+        <div class="section-heading">
+            <h2>Leave a Message</h2>
+            <p>Write something anonymous and let it drift into the archive.</p>
+        </div>
+
+        <form id="entryForm" class="entry-form">
+            <label for="message">Your message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write something you want to leave behind..."
+                required></textarea>
+
+            <div class="form-grid">
+                <div>
+                    <label for="mood">Mood</label>
+                    <select id="mood" name="mood">
+                        <option value="hope">Hope</option>
+                        <option value="love">Love</option>
+                        <option value="regret">Regret</option>
+                        <option value="nostalgia">Nostalgia</option>
+                        <option value="loneliness">Loneliness</option>
+                        <option value="gratitude">Gratitude</option>
+                        <option value="dream">Dream</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="toWhom">To whom</label>
+                    <select id="toWhom" name="toWhom">
+                        <option value="to a stranger">To a stranger</option>
+                        <option value="to my past self">To my past self</option>
+                        <option value="to my future self">To my future self</option>
+                        <option value="to someone I miss">To someone I miss</option>
+                        <option value="to no one">To no one</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="tag">Tag (optional)</label>
+            <input type="text" id="tag" name="tag" placeholder="memory, goodbye, wish..." />
+
+            <button type="submit" class="submit-button">Send Bottle</button>
+            <p id="formMessage" class="form-message"></p>
+        </form>
+    </section>
+
+    <section class="archive-section">
+        <div class="section-heading">
+            <h2>The Archive</h2>
+            <p>Messages left behind by strangers.</p>
+        </div>
+
+        <div class="controls">
+            <div>
+                <label for="filterMood">Filter by mood</label>
+                <select id="filterMood">
+                    <option value="all">All moods</option>
+                    <option value="hope">Hope</option>
+                    <option value="love">Love</option>
+                    <option value="regret">Regret</option>
+                    <option value="nostalgia">Nostalgia</option>
+                    <option value="loneliness">Loneliness</option>
+                    <option value="gratitude">Gratitude</option>
+                    <option value="dream">Dream</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="sortEntries">Sort</label>
+                <select id="sortEntries">
+                    <option value="newest">Newest first</option>
+                    <option value="oldest">Oldest first</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="searchTag">Search by tag</label>
+                <input type="text" id="searchTag" placeholder="search a tag..." />
+            </div>
+        </div>
+
+        <div id="entriesContainer" class="entries-grid"></div>
+    </section>
+</main>
