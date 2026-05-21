@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-- [Include a link to the live version of the project hosted on Render.](https://final-project-pt9v.onrender.com)
+- [Render Site](https://final-project-pt9v.onrender.com)
 
 ## Project Overview
 
