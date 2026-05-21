@@ -38,9 +38,13 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
+
+mongoose.set('bufferCommands', false);
+
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URL, {
-  dbName: 'publicArchiveDB'
+  dbName: 'publicArchiveDB',
+  serverSelectionTimeoutMS: 5000
 })
   .then(function () {
     console.log('Connected to MongoDB!');
