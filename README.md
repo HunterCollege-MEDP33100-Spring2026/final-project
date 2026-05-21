@@ -31,7 +31,7 @@ https://final-project-nafisa-islam.onrender.com
 Third-Party Assets:
 - Notebook paper background image – used for the text area design
 - School memory zine PDF/images – created and added by me for the project
-- Default web fonts (Arial/Georgia) – used for website text styling
+- Default web fonts (Times Roman/Arial/Georgia) – used for website text styling
 
 Resources and References:
 
