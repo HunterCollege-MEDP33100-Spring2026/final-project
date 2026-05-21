@@ -45,8 +45,8 @@ mongoose.connect(process.env.MONGODB_URL)
     .then(function() {
         console.log('Connected to MongoDB!');
     })
-    .catch(function(error) {
-        console.log('Error connecting to MongoDB.');
-    })
+ .catch(function(error) {
+    console.log('Error connecting to MongoDB:', error.message);
+});
 
 module.exports = app;

@@ -1,2 +1,54 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="overlay">
+
+    <h1>THE LAST MESSAGE NETWORK</h1>
+
+    <p class="intro">
+        Before the signal disappears forever,
+        leave one final message for the world.
+    </p>
+
+    <form id="entryForm">
+        <!--form field-->
+        <textarea name="message" placeholder="Your final message..." required></textarea>
+
+        <select name="emotion">
+            <option>Hope</option>
+            <option>Regret</option>
+            <option>Fear</option>
+            <option>Love</option>
+        </select>
+
+        <select name="category">
+            <option>Confession</option>
+            <option>Warning</option>
+            <option>Truth</option>
+            <option>Joke</option>
+        </select>
+
+        <input type="text" name="alias" placeholder="Anonymous alias">
+
+        <input type="text" name="recipient" placeholder="Who is this message for? optional">
+
+        <label class="checkbox-row">
+            <input type="checkbox" name="sendStatus" value="true">
+            I would actually send this message
+        </label>
+
+        <button type="submit">
+            TRANSMIT SIGNAL
+        </button>
+
+    </form>
+
+    <!-- Link to archive page -->
+
+    <a href="/archive" class="archive-link">
+
+        VIEW ALL TRANSMISSIONS
+
+    </a>
+
+    <div id="entriesContainer"></div>
+
+</div>
+<script src="/javascripts/script.js"></script>
