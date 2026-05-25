@@ -1,1 +1,207 @@
-/* Your CSS goes here  */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times,;
+    background: #f4f1ea;
+}
+
+/* hero*/
+
+.hero {
+    background: #fcfdfd;
+    background-image: url(/images/img10.jpg);
+
+    text-align: center;
+    padding: 20px 10px;
+}
+
+
+.hero h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 22px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.5;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* memory form  */
+
+.memory-section {
+    background: #eeeb42d4;
+    padding: 60px 20px;
+}
+
+.memory-section h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.memory-section p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+
+/* form box */
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    /* move to left */
+    width: 500px;
+    margin-left: 0;
+}
+
+
+select,
+textarea {
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid #222;
+    font-size: 22px;
+    font-family: Georgia, serif;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+
+/* drop down  */
+
+select {
+    height: 70px;
+    cursor: pointer;
+}
+
+
+/* note book text */
+
+textarea {
+    height: 250px;
+    resize: none;
+
+    background-image: url('/images/notebook-bg.png');
+    background-repeat: repeat;
+    background-size: contain;
+
+    line-height: 32px;
+    color: #222;
+}
+
+
+/* input focus */
+
+select:focus,
+textarea:focus {
+    border-color: #b31ee0;
+    box-shadow: 0 0 15px rgba(138, 92, 255, 0.3);
+}
+
+
+/* button */
+
+#submitBtn {
+    width: 180px;
+    padding: 18px;
+    border: none;
+    border-radius: 40px;
+    background: #f3f3f3;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/* button hover*/
+
+#submitBtn:hover {
+    background: #222;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* button */
+
+#submitBtn:active {
+    transform: scale(0.96);
+}
+
+/* read my zine */
+
+.hero button {
+    margin-top: 30px;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    background: #f3f3f3;
+
+    transition: all 0.3s ease;
+}
+
+
+/* hover  */
+
+.hero button:hover {
+    background: #222;
+    color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+/* click */
+
+.hero button:active {
+    transform: scale(0.96);
+}
+
+/* wall */
+
+.notes-section {
+    padding: 60px 20px;
+}
+
+#notesWall {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.note {
+    width: 220px;
+    min-height: 220px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    font-size: 18px;
+    transform: rotate(-2deg);
+    word-wrap: break-word;
+}
+
+/* mobile */
+
+@media(max-width: 900px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+}

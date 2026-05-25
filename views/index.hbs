@@ -1,2 +1,71 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<section class="hero">
+
+    <h1>The Memory Wall </h1>
+
+    <p>
+        Everyone has a school memory worth remembering. Read through my zine, then leave behind an anonymous memory of
+        your own.
+    </p>
+
+    <a href="/my-zine.pdf" target="_blank">
+
+        <button>
+            Read My Zine
+        </button>
+
+    </a>
+
+</section>
+
+<section class="memory-section">
+
+    <h2>Leave a School Memory</h2>
+
+    <p>
+        Choose any color sticky note and add your story.
+    </p>
+
+
+    <div class="form-box">
+
+        <select id="colorInput">
+
+            <option value="#ffeb3b">
+                Yellow Sticky Note
+            </option>
+
+            <option value="#ffb6c1">
+                Pink Sticky Note
+            </option>
+
+            <option value="#90caf9">
+                Blue Sticky Note
+            </option>
+
+            <option value="#a5d6a7">
+                Green Sticky Note
+            </option>
+
+        </select>
+
+
+        <textarea id="memoryInput" placeholder="Write your school memory...">
+        </textarea>
+
+
+        <button id="submitBtn">
+            Add
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="notes-section">
+
+    <h2> Memory Board </h2>
+
+    <div id="notesWall"></div>
+
+</section>

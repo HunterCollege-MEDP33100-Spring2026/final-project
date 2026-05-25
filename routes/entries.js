@@ -1,38 +1,40 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const Entry = require('../models/Entry');
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-    // Your code here
 
-    res.send("Returns all entries.");
+// GET ALL MEMORIES
+
+router.get('/', async function(req, res) {
+
+    const entries =
+    await Entry.find().sort({
+        createdAt: -1
+    });
+
+    res.json(entries);
+
 });
 
-router.post('/', function (req, res, next) {
-    // Your code here
 
-    res.send("Created a new entry.");
-});
+// ADD MEMORY
 
-router.get('/:id', function (req, res, next) {
-    const id = req.params.id;
-    // Your code here
+router.post('/', async function(req, res) {
 
-    res.send("Returns entry with id: " +id);
-});
+    const newEntry =
+    new Entry({
 
-router.put('/:id', function (req, res, next) {
-    const id = req.params.id;
-    // Your code here
+        memory: req.body.memory,
+        color: req.body.color
 
-    res.send("Updated entry with id: " + id);
-});
+    });
 
-router.delete('/:id', function (req, res, next) {
-    const id = req.params.id;
-    // Your code here
+    await newEntry.save();
 
-    res.send("Deleted entry with id: " + id);
+    res.json({
+        success: true
+    });
+
 });
 
 module.exports = router;
