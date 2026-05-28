@@ -1,9 +1,24 @@
 var express = require('express');
 var router = express.Router();
-
-/* GET home page. */
+var Entry = require('../models/Entry');
+ 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Public Archive' });
+  var category = req.query.category;
+  var filter = category && category !== 'all' ? { category: category } : {};
+ 
+  Entry.find(filter).sort({ createdAt: -1 })
+    .then(function(entries) {
+      res.render('index', {
+        title: 'I Love NYC',
+        entries: entries,
+        entriesJson: JSON.stringify(entries),
+        selectedCategory: category || 'all'
+      });
+    })
+    .catch(function(err) {
+      next(err);
+    });
 });
-
+ 
 module.exports = router;
+ 
