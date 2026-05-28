@@ -1,2 +1,111 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="site-header">
+  <h1>I <span class="heart">♥</span> NYC</h1>
+  <p class="tagline">A public archive of New York City spots. From New Yorkers by New Yorkers!! </p>
+</div>
+
+<div class="main-layout">
+
+  <!-- submission form -->
+  <div class="form-section">
+    <h2>Add a Spot</h2>
+    <form id="entry-form">
+      <div class="field">
+        <label for="name">Place Name *</label>
+        <input type="text" id="name" placeholder="e.g. Joe's Pizza" />
+        <span class="error" id="name-error"></span>
+      </div>
+      <div class="field">
+        <label for="location">Location / Address *</label>
+        <input type="text" id="location" placeholder="e.g. 7 Carmine St, Manhattan" />
+        <span class="error" id="location-error"></span>
+      </div>
+      <div class="field">
+        <label for="category">Category *</label>
+        <select id="category">
+          <option value="">-- Select a category --</option>
+          <option value="food">Food</option>
+          <option value="park">Park</option>
+          <option value="art">Art</option>
+          <option value="music">Music</option>
+          <option value="shopping">Shopping</option>
+          <option value="nightlife">Nightlife</option>
+          <option value="other">Other</option>
+        </select>
+        <span class="error" id="category-error"></span>
+      </div>
+      <div class="field">
+        <label for="review">Review *</label>
+        <textarea id="review" placeholder="Why should people go here?"></textarea>
+        <span class="error" id="review-error"></span>
+      </div>
+      <div class="field">
+        <label for="submittedBy">Your Name (optional)</label>
+        <input type="text" id="submittedBy" placeholder="Leave blank to stay anonymous" />
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="lat">Latitude (optional)</label>
+          <input type="text" id="lat" placeholder="e.g. 40.7306" />
+        </div>
+        <div class="field">
+          <label for="lng">Longitude (optional)</label>
+          <input type="text" id="lng" placeholder="e.g. -73.9352" />
+        </div>
+      </div>
+      <span class="error" id="form-error"></span>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- archive feed -->
+  <div class="feed-section">
+    <h2>The Archive</h2>
+
+    <!-- category filters -->
+    <div class="filters">
+      <button class="filter-btn {{#if (eq selectedCategory 'all')}}active{{/if}}" data-category="all">All</button>
+      <button class="filter-btn {{#if (eq selectedCategory 'food')}}active{{/if}}" data-category="food">Food</button>
+      <button class="filter-btn {{#if (eq selectedCategory 'park')}}active{{/if}}" data-category="park">Park</button>
+      <button class="filter-btn {{#if (eq selectedCategory 'art')}}active{{/if}}" data-category="art">Art</button>
+      <button class="filter-btn {{#if (eq selectedCategory 'music')}}active{{/if}}" data-category="music">Music</button>
+      <button class="filter-btn {{#if (eq selectedCategory 'shopping')}}active{{/if}}" data-category="shopping">Shopping</button>
+      <button class="filter-btn {{#if (eq selectedCategory 'nightlife')}}active{{/if}}" data-category="nightlife">Nightlife</button>
+      <button class="filter-btn {{#if (eq selectedCategory 'other')}}active{{/if}}" data-category="other">Other</button>
+    </div>
+
+    <!-- entries list -->
+    <div id="entries-list">
+      {{#if entries.length}}
+        {{#each entries}}
+        <div class="entry-card" data-id="{{_id}}">
+          <div class="entry-top">
+            <span class="entry-name">{{name}}</span>
+            <span class="entry-category cat-{{category}}">{{category}}</span>
+          </div>
+          <p class="entry-location">📍 {{location}}</p>
+          <p class="entry-review">{{review}}</p>
+          <div class="entry-meta">
+            <span>submitted by {{submittedBy}}</span>
+            <button class="delete-btn" data-id="{{_id}}">delete</button>
+          </div>
+        </div>
+        {{/each}}
+      {{else}}
+        <p class="empty">No recomendations yet. Give us one!</p>
+      {{/if}}
+    </div>
+  </div>
+
+</div>
+
+<!-- map section -->
+<div class="map-section">
+  <h2>NYC Map</h2>
+  <p class="map-note">Spots with coordinates appear on the map below.</p>
+  <div id="map"></div>
+</div>
+
+<!-- pass entries to JS for map -->
+<script>
+  var entries = {{{entriesJson}}};
+</script>

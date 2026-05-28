@@ -2,28 +2,34 @@
 
 ## Live Demo
 
-- Include a link to the live version of the project hosted on Render.
+- [(https://final-project-b2xm.onrender.com)]
 
 ## Project Overview
 
-- Briefly describe the project and its purpose.
+- I Love NYC is a public archive where anyone can submit and browse their favorite spots around New York City. Users fill out a form with a place name, location, category, and review. Entries appear in a live feed that can be filtered by category, and spots with coordinates show up as markers on an interactive map.
 
 ## Endpoints
 
-- List all the endpoints of the API in this project with a brief description of what each endpoint does.
+- GET /entries — returns all entries, supports optional ?category= query to filter by category
+- GET /entries/:id — returns a single entry that matches the given id
+- POST /entries — creates and saves a new entry
+- PUT /entries/:id — updates the entry that matches the given id
+- DELETE /entries/:id — deletes the entry that matches the given id
 
 ## Technologies Used
 
 - List the technologies and tools used in the project:
-    - **Languages**: HTML, CSS, JavaScript
-    - **Libraries**: (e.g., GSAP for animations)
-    - **Other**: Figma for design, Adobe Illustrator for illustrations, OpenAI for A.I. generated assets, etc.
+  - **Languages**: HTML, CSS, JavaScript
+  - **Libraries**: Leaflet.js for the interactive map, Handlebars (hbs) for templating, Mongoose for working with MongoDB
+  - **Other**: MongoDB Atlas for the database, Express for the server, dotenv for environment variables
 
 ## Credits
 
-- List any third-party assets used in the project (e.g., sound effects, images, fonts) and provide proper attribution.
-- Acknowledge any resources, tutorials, or references you used to help complete the project.
+- Map tiles provided by [OpenStreetMap](https://www.openstreetmap.org/copyright)
+- Interactive map built with [Leaflet.js](https://leafletjs.com)
 
 ## Future Enhancements
 
-- List any features you would’ve liked to add if given more time
+- Add the ability to upload a photo with each submission
+- Let users upvote their favorite spots
+- Use a geocoding API to auto-fill lat/lng from an address

@@ -1,1 +1,263 @@
-/* Your CSS goes here  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #fafaf7;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+/* header */
+.site-header {
+  border-bottom: 2px solid #1a1a1a;
+  padding: 20px 24px;
+  background: #fff;
+}
+
+.site-header h1 {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.heart {
+  color: #e03030;
+}
+
+.tagline {
+  color: #555;
+  font-size: 14px;
+}
+
+/* main two-column layout */
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 24px;
+  align-items: flex-start;
+}
+
+/* form column */
+.form-section {
+  width: 300px;
+  min-width: 300px;
+  border: 1px solid #ccc;
+  padding: 18px;
+  background: #fff;
+}
+
+.form-section h2 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.field {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.field label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.field input,
+.field textarea,
+.field select {
+  border: 1px solid #ccc;
+  padding: 7px;
+  font-size: 13px;
+  font-family: Georgia, serif;
+  background: #fff;
+  width: 100%;
+}
+
+.field textarea {
+  height: 75px;
+  resize: vertical;
+}
+
+.field-row {
+  display: flex;
+  gap: 8px;
+}
+
+.field-row .field {
+  flex: 1;
+}
+
+.error {
+  color: #e03030;
+  font-size: 11px;
+}
+
+button[type="submit"] {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 9px 0;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 6px;
+  font-family: Georgia, serif;
+  width: 100%;
+}
+
+/* feed column */
+.feed-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.feed-section h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+/* filters by type of place */
+.filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.filter-btn {
+  border: 1px solid #1a1a1a;
+  background: #fff;
+  color: #1a1a1a;
+  padding: 3px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  text-transform: capitalize;
+}
+
+.filter-btn.active {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* entry cards made by user */
+.entry-card {
+  border: 1px solid #ccc;
+  padding: 14px;
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.entry-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.entry-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.entry-category {
+  font-size: 10px;
+  padding: 2px 7px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.cat-food {
+  background: #e8f0d8;
+}
+.cat-park {
+  background: #d8edd8;
+}
+.cat-art {
+  background: #f0e0d8;
+}
+.cat-music {
+  background: #e0d8f0;
+}
+.cat-shopping {
+  background: #f0f0d8;
+}
+.cat-nightlife {
+  background: #e0e8f0;
+}
+.cat-other {
+  background: #f0f0f0;
+}
+
+.entry-location {
+  color: #555;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.entry-review {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.entry-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #888;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #e03030;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Georgia, serif;
+}
+
+.empty {
+  color: #888;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* map section */
+.map-section {
+  padding: 0 24px 40px 24px;
+}
+
+.map-section h2 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.map-note {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+/* responsive */
+@media (max-width: 700px) {
+  .main-layout {
+    flex-direction: column;
+  }
+  .form-section {
+    width: 100%;
+    min-width: unset;
+  }
+}
